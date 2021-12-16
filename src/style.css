@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.list-container {
+  width: 50%;
+  margin: 10% auto;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 1px #eee;
+}
+
+h1 {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5rem;
+  padding: 0.85rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+form > input {
+  width: 80%;
+  outline: none;
+  border: none;
+}
+
+.add {
+  border: none;
+  font-style: italic;
+}
+
+.add::placeholder {
+  font-style: italic;
+}
+
+.fa-plus {
+  padding: 0.1rem 0.5rem;
+  cursor: pointer;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75rem;
+  border-bottom: 1px solid #e5e5e5;
+  gap: 0.5rem;
+}
+
+textarea {
+  width: 90%;
+  border: none;
+  resize: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  padding-top: 0.9rem;
+}
+
+.material-icons {
+  width: 1rem;
+  height: 1rem;
+  padding-right: 0.5rem;
+  color: #c3c2c4;
+  cursor: pointer;
+}
+
+.add-arrow {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.material-icons:hover {
+  color: #000;
+}
+
+.clear {
+  all: unset;
+  width: 100%;
+  margin: 0 auto;
+  font-weight: lighter;
+  text-align: center;
+  padding: 1rem 0;
+  color: #a3a3a3;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.clear:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+[type=checkbox] {
+  cursor: pointer;
+}
