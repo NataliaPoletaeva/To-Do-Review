@@ -1,6 +1,6 @@
 import {
   editTask,
-} from './crud.js';
+} from './edit.js';
 import { removeTask } from './addTask.js';
 import localMock from './_mock_/localStorageMock.js';
 

@@ -1,8 +1,9 @@
-const clearAll = () => {
-  const tasks = JSON.parse(localStorage.getItem('task.list')) || [];
+import localMock from './_mock_/localStorageMock.js';
+
+const clearAll = (tasks) => {
   const leaveTasks = tasks.filter((task) => task.completed === false);
-  localStorage.setItem('task.list', JSON.stringify(leaveTasks));
-  window.location.reload();
+  localMock.setItem('todoList', JSON.stringify(leaveTasks));
+  return leaveTasks;
 };
 
 export default clearAll;
