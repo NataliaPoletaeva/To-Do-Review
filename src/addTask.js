@@ -10,7 +10,7 @@ const addTask = (tasks, task) => {
 };
 
 const removeTask = (task, tasks) => {
-  let { index } = task;
+  const { index } = task;
   const filteredTasks = tasks.filter((task) => task.index !== index);
   localMock.setItem('todoList', JSON.stringify(filteredTasks));
   return filteredTasks;

@@ -1,4 +1,5 @@
 import localMock from './_mock_/localStorageMock.js';
+
 const localTaskKey = 'todoList';
 const tasks = [];
 const taskInput = document.querySelector('[data-task-input]');
@@ -18,5 +19,5 @@ const editTask = (e) => {
 };
 
 export {
-  tasks, taskInput, save, editTask
+  tasks, taskInput, save, editTask,
 };

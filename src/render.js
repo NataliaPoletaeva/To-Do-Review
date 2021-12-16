@@ -1,6 +1,7 @@
 import {
-  editTask, removeTask,
+  editTask,
 } from './crud.js';
+import { removeTask } from './addTask.js';
 import localMock from './_mock_/localStorageMock.js';
 
 const taskContainer = document.createElement('div');
