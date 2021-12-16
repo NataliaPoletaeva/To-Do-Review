@@ -1,17 +1,19 @@
-import {
-  localTasks, taskInput, save, createTask,
-} from './crud.js';
-import render from './render.js';
+import localMock from './_mock_/localStorageMock.js';
 
-const addTask = (event) => {
-  event.preventDefault();
-  const taskName = taskInput.value;
-  if (taskName == null || taskName === '') return;
-  const task = createTask();
-  localTasks.push(task);
-  taskInput.value = '';
-  save();
-  render();
+const addTask = (tasks, task) => {
+  tasks.push({
+    id: 1,
+    description: task,
+    completed: false,
+  });
+  localMock.setItem('todoList', JSON.stringify(tasks));
 };
 
-export default addTask;
+const removeTask = (task, tasks) => {
+  let { index } = task;
+  const filteredTasks = tasks.filter((task) => task.index !== index);
+  localMock.setItem('todoList', JSON.stringify(filteredTasks));
+  return filteredTasks;
+};
+
+export { addTask, removeTask };
