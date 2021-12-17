@@ -8,14 +8,10 @@ const save = () => {
   localMock.setItem(localTaskKey, JSON.stringify(tasks));
 };
 
-const editTask = (e) => {
-  const edit = e.target;
-  if (edit.tagName.toLowerCase() === 'textarea') {
-    // eslint-disable-next-line eqeqeq
-    const selectedEdit = localMock.find((task) => task.id == edit.id);
-    selectedEdit.description = edit.value;
-  }
-  save();
+const editTask = (tasks, newTask) => {
+  const selectedEdit = tasks[0];
+  selectedEdit.description = newTask;
+  localMock.setItem(localTaskKey, JSON.stringify(selectedEdit));
 };
 
 export {

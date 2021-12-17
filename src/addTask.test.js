@@ -5,8 +5,8 @@
 import { addTask, removeTask } from './addTask.js';
 
 describe('Todo list functionality', () => {
-  // addTodo test
   let tasks = [];
+
   test('addTask', () => {
     const task = 'test';
     addTask(tasks, task);
